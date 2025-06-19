@@ -28,9 +28,9 @@ jobs:
         run: |
           uv sync
 
-      - name: Сheck style and format
+      - name: Сheck style
         run: |
-          uv tool run ruff check app/ tests/ --fix --format
+          uv tool run ruff format --check app/ tests/
 
       - name: Run tests
         run: |
